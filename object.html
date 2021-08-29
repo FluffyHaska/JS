@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <script>
+    
+function object() { // Манипулирование содержимым обьекта
+let user = {
+    name: 'Haska',
+    fursona: 'Husky',
+    sex: 'Male',
+}
+alert (user.name)
+alert (user.fursona)
+alert (user.sex)
+
+user.age = 25
+user.day ='Saturday'
+alert (user.age)
+delete user.age
+alert (user.age)
+alert (user.day)
+}
+object();
+
+function weekend() { // Даю название ключа обьекту и свойства
+
+     let day = prompt ('Какой сегодня день недели?', "saturday" );
+        let saturday = {
+          [day]: "Сегодня выходной",
+      }
+alert (saturday.saturday);
+    }
+weekend();
+
+function dayToday (day, month) {
+    return {
+        day,
+        month,
+    }
+}
+    let august = dayToday('Суббота', 'Август');
+    alert (august.day);
+    alert (august.month);
+dayToday();
+
+function day () { //for...in
+    let day = {
+        day: 28,
+        month:'August',
+        year: 2021 + ' года',
+    }
+    for (let key in day) {
+        alert (day[key])
+    }
+}
+day()
+  </script>
+</body>
+</html>
